@@ -119,6 +119,31 @@ h1 img {
   transform-origin: center; /* Ensure scaling happens from the center */
 }
 
+/* Added styling for the bad obstacle item */
+.dirty-water {
+  width: 100%;
+  height: 100%;
+  background-color: #7a4b2a;
+  border-radius: 50%;
+  border: 4px solid #5b351b;
+  cursor: pointer;
+  animation: popUp 0.5s cubic-bezier(0.17, 0.67, 0.34, 2);
+  transform-origin: center;
+  position: relative;
+}
+
+.dirty-water::after {
+  content: "!";
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 @keyframes popUp {
   0% {
     transform: scale(0.5); /* Start scaling from the center */
@@ -140,4 +165,79 @@ button {
   display: block;
   margin: 30px auto 0;
   transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Added styling for reset button */
+#reset-game {
+  background-color: #F5402C;
+  margin-top: 15px;
+}
+
+#reset-game:hover {
+  background-color: #d93624;
+}
+
+/* Added achievement / status message styles */
+.achievement {
+  min-height: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2E9DF7;
+}
+
+.win-message {
+  color: #159A48;
+}
+
+.lose-message {
+  color: #F5402C;
+}
+
+/* Added simple confetti styling */
+.confetti {
+  position: fixed;
+  top: -30px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fall 2.5s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Small responsive improvement */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .game-grid {
+    gap: 10px;
+  }
+
+  .water-can-wrapper {
+    width: 55px;
+    height: 55px;
+  }
 }
