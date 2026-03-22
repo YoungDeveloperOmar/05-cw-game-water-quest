@@ -10,15 +10,34 @@
   <div class="container">
     <h1>Water Quest</h1>
     <p class="game-instructions">Collect 20 items to complete the game!</p>
+
+    <div class="difficulty-row">
+      <span class="difficulty-label">Difficulty:</span>
+      <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+      <button class="difficulty-btn active" data-difficulty="normal">Normal</button>
+      <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+
     <div class="stats">
       <p>Cans Collected: <span id="current-cans">0</span></p>
+      <p>Goal: <span id="goal-cans">20</span></p>
       <p>Time Left: <span id="timer">30</span>s</p>
     </div>
+
     <div id="achievements" class="achievement"></div>
     <div class="game-grid"></div>
     <button id="start-game">Start Game</button>
     <button id="reset-game">Reset Game</button>
+
+    <footer class="footer">
+      <p>Learn more about the mission behind clean water access:</p>
+      <div class="footer-links">
+        <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">charity: water</a>
+        <a href="https://www.charitywater.org/donate" target="_blank" rel="noopener noreferrer">Donate</a>
+      </div>
+    </footer>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ Fonts:
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Avenir Next", Avenir, Arial, sans-serif;
   margin: 0;
   padding: 30px;
   background-color: #f0f0f0;
@@ -155,7 +155,7 @@ h1 img {
 
 
 button {
-  background-color: #4CAF50;
+  background-color: #2E9DF7;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -168,7 +168,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #1f86d8;
 }
 
 /* Added styling for reset button */
@@ -219,6 +219,70 @@ button:hover {
   }
 }
 
+/* Added difficulty selector styles */
+.difficulty-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.difficulty-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.difficulty-btn {
+  background-color: #e8f4ff;
+  color: #333;
+  display: inline-block;
+  margin: 0;
+}
+
+.difficulty-btn:hover {
+  background-color: #d6ebff;
+}
+
+.difficulty-btn.active {
+  background-color: #FFC907;
+  color: #333;
+}
+
+/* Added footer link section */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  background-color: #FFC907;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  opacity: 0.9;
+}
+
 /* Small responsive improvement */
 @media (max-width: 600px) {
   .container {
@@ -239,5 +303,9 @@ button:hover {
   .water-can-wrapper {
     width: 55px;
     height: 55px;
+  }
+
+  .difficulty-row {
+    flex-direction: column;
   }
 }
